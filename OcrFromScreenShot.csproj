@@ -17,4 +17,34 @@
     <Folder Include="Tesseract\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="C:\Users\fabio\.nuget\packages\tesseract\5.2.0\build\\..\x86\leptonica-1.82.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\fabio\.nuget\packages\tesseract\5.2.0\build\\..\x86\tesseract50.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\fabio\.nuget\packages\tesseract\5.2.0\build\\..\x64\leptonica-1.82.0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\fabio\.nuget\packages\tesseract\5.2.0\build\\..\x64\tesseract50.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tesseract\tessdata_fast\eng.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Tesseract\tessdata_fast\por.traineddata">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

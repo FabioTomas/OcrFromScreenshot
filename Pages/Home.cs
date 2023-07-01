@@ -16,10 +16,23 @@ namespace OcrFromScreenShot
                                                 Screen.PrimaryScreen.Bounds.X,
                                                 Screen.PrimaryScreen.Bounds.Y);
 
-            var screenshot = new Screenshot();
-            screenshot.BackgroundImage = screen;
+            using (Screenshot screenshot = new Screenshot())
+            {
+                screenshot.Owner = this;
+                screenshot.BackgroundImage = screen;
+                screenshot.ShowDialog();
+            }
 
-            screenshot.ShowDialog();
-        }    
+        }
+
+        public void GetText(string text)
+        {
+            this.TextBox.Text = text;
+        }
+
+        private void On_Resize(object sender, EventArgs e)
+        {
+            TextBox.Width = this.Width; TextBox.Height = this.Height;
+        }
     }
 }

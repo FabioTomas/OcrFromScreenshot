@@ -59,7 +59,11 @@ namespace OcrFromScreenShot
                                                     dr.Location.X,
                                                     dr.Location.Y);
 
-            screenshot.Save("screenshotPart.jpg", ImageFormat.Jpeg);
+            //screenshot.Save("screenshotPart.jpg", ImageFormat.Jpeg);
+            var text = new OcrManager().ReadImage(screenshot, "eng");
+
+            Home parent = (Home)this.Owner;
+            parent.GetText(text);
 
             this.Close();
         }
