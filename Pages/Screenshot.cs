@@ -22,6 +22,7 @@ namespace OcrFromScreenShot
         public Screenshot()
         {
             this.DoubleBuffered = true;
+            this.Cursor = Cursors.Cross;
             InitializeComponent();
         }
 
